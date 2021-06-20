@@ -1,17 +1,18 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Alex Goodwin
+ */
+
 package ex45;
 
 public class WordFinder {
 
     String finding(String information){
         //replace the word utilize
-        return replaceUtilize(information);
+
+        return information.replaceAll("utilize", "use");
 
 
     }
 
-    String replaceUtilize(String infomration){
-        String replaced = infomration.replaceAll("utilize", "use");
-
-        return replaced;
-    }
 }

@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class App
+abstract class Input
+
+Input <|-- App
+App <|-- Input
+
+wordsInFile <|-- App
+App <|-- wordsInFile
+
+wordCount <|-- App
+App <|-- wordCount
+
+output <|-- App
+
+
+class App {
+List allwords
+Int[] count
+String Input
+}
+
+class Input {
+List allwords
+String Input
+}
+
+class wordsInFile{
+List allwords
+String Input
+}
+
+class wordCount{
+List allwords
+String Input
+Int[] count
+}
+
+class output{
+List allwords
+Int[] count
+}
+
+@enduml
