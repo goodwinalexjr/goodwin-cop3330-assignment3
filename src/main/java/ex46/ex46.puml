@@ -3,6 +3,9 @@
 
 abstract class App
 abstract class Input
+abstract class wordsInFile
+abstract class wordCount
+abstract class output
 
 Input <|-- App
 App <|-- Input
@@ -17,30 +20,23 @@ output <|-- App
 
 
 class App {
-List allwords
-Int[] count
-String Input
+main()
 }
 
 class Input {
-List allwords
 String Input
 }
 
 class wordsInFile{
-List allwords
-String Input
+List<String> words
 }
 
 class wordCount{
-List allwords
-String Input
-Int[] count
+int[] word
 }
 
 class output{
-List allwords
-Int[] count
+void output
 }
 
 @enduml

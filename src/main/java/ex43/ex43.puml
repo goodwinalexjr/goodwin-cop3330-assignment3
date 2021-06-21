@@ -1,27 +1,21 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+abstract class App
+abstract class WebsiteGenerator
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+WebsiteGenerator <|-- App
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
 
-class ArrayList {
-Object[] elementData
-size()
+class App {
+Input
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class WebsiteGenerator{
+createFolders
+createIndex
 }
+
+
 
 @enduml

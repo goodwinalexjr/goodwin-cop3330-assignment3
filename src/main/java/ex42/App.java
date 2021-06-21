@@ -14,14 +14,15 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class App {
-    static Map<Integer, String> input= new HashMap<Integer, String>();
+
 
     static ParsingData pd = new ParsingData();
     //main code here
     public static void main( String[] args ) throws FileNotFoundException {
 
+        Map<Integer, String> input= new HashMap<Integer, String>();
         //input function here and how many inputs in the map
-        int inputAmount = input();
+        int inputAmount = input(input);
         System.out.printf("Last        First      Salary\n");
         System.out.println("------------------------------");
         for(int i = 0; i < inputAmount; i++) {
@@ -37,7 +38,7 @@ public class App {
 
     }
 
-    static int input() throws FileNotFoundException {
+    static int input(Map<Integer, String> input) throws FileNotFoundException {
         //get information from file
         File myObj = new File("src/main/java/ex42/exercise42_input.txt");
         Scanner file = new Scanner(myObj);

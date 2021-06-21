@@ -1,27 +1,26 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+abstract class App
+abstract class ParsingData
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+ParsingData <|-- App
+App <|-- ParsingData
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+ParsingData <|- App
+App <|- ParsingData
 
-class ArrayList {
-Object[] elementData
-size()
+ParsingData <|-- App
+App <|- ParsingData
+class App {
+Input()
+Output()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class ParsingData{
+parsingdatafirst
+parsingdatalast
+parsingdatasalery
 }
 
 @enduml

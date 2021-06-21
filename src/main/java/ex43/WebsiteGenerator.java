@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class WebsiteGenerator {
 
-    void createFolders(String websiteName,String Author,String Javascript,String css) throws IOException {
+    boolean createFolders(String websiteName, String Author, String Javascript, String css) throws IOException {
         //create the first folder with website name
         String mainLocation = "src/main/java/ex43/website" ;
         String websitename = mainLocation + "/" + websiteName;
@@ -57,9 +57,10 @@ public class WebsiteGenerator {
 
         }
 
+        return create;
     }
 
-    void createIndex(String websiteName,String Author) throws IOException {
+    void createIndex(String websiteName, String Author) throws IOException {
 
         //create the index file
         String Indexpath = "src/main/java/ex43/website/" + websiteName + "/index.html";
@@ -90,6 +91,7 @@ public class WebsiteGenerator {
         indexwrite.write(indexwriten);
         indexwrite.close();
         System.out.println("Created ./website/" + websiteName + "/index.html");
+
 
 
     }
